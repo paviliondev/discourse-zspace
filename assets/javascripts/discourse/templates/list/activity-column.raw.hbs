@@ -1,0 +1,14 @@
+<{{tagName}} class="{{class}} {{cold-age-class topic.createdAt startDate=topic.bumpedAt class=""}} activity" title="{{{topic.bumpedAtTitle}}}">
+  <a class="post-activity" href="{{topic.lastPostUrl}}">
+    {{~raw-plugin-outlet name="topic-list-before-relative-date"~}}
+    {{~format-date topic.bumpedAt format="tiny" noTitle="true"~}}
+  </a>
+</{{tagName}}>
+
+<td class="activity-file">
+  {{#if topic.activity_file}}
+    <a href="{{topic.activity_file}}" class="btn btn-default no-text" download="">
+      {{d-icon 'download'}}
+    </a> 
+  {{/if}}
+</td>
