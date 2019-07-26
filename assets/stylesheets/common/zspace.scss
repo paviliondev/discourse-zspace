@@ -2,3 +2,14 @@ td.activity-file {
   width: 30px;
   text-align: center;
 }
+
+@include breakpoint(medium) {
+  button#upload-activity {
+    span {
+      display: none;
+    }
+    .d-icon {
+      margin-right: 0;
+    }
+  }
+}
