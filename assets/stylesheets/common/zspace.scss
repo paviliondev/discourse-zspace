@@ -3,6 +3,12 @@ td.activity-file {
   text-align: center;
 }
 
+.topic-category > span {
+  margin-top: 8px;
+  display: block;
+  break-before: always;
+}
+
 @include breakpoint(medium) {
   button#upload-activity {
     span {

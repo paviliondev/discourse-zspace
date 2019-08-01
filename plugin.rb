@@ -12,8 +12,7 @@ after_initialize do
   add_to_serializer(:topic_view, :activity_file) {
     if object.topic.custom_fields['activity_file']
       begin
-        file = JSON.parse(object.topic.custom_fields['activity_file'])
-        file["url"]
+        JSON.parse(object.topic.custom_fields['activity_file'])
       rescue JSON::ParserError => e
         puts e
       end 
