@@ -2,3 +2,6 @@ plugins:
   zspace_upload_activity_wizard_url:
     client: true
     default: ''
+  zspace_display_activity_file_below_topic_title:
+    client: true
+    default: false

@@ -1,5 +1,5 @@
-{{#if topic.activity_file}}
-  <a href="{{topic.activity_file.url}}" target="_blank" class="activity-file-link">
-    {{topic.activity_file.original_filename}}
-  </a>
+{{#if siteSettings.zspace_display_activity_file_below_topic_title}}
+  {{#if topic.activity_file}}
+    {{d-button href=topic.activity_file.url icon="download" translatedLabel=topic.activity_file.original_filename}}
+  {{/if}}
 {{/if}}
