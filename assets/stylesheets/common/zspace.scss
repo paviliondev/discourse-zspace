@@ -1,4 +1,4 @@
-td.activity-file {
+td.zspace-upload {
   width: 30px;
   text-align: center;
 }
@@ -10,7 +10,7 @@ td.activity-file {
 }
 
 @include breakpoint(medium) {
-  button#upload-activity {
+  button#zspace-upload {
     span {
       display: none;
     }

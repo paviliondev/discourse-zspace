@@ -1,4 +1,4 @@
 en:
   site_settings:
-    zspace_upload_activity_wizard_url: "Url of upload activity wizard"
-    zspace_display_activity_file_below_topic_title: "Display activity file link below topic title"
+    zspace_upload_wizard_url: "Url of upload wizard"
+    zspace_display_upload_below_topic_title: "Display upload link below topic title"

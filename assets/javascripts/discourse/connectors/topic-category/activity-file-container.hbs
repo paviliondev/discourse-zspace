@@ -1,5 +1,5 @@
-{{#if siteSettings.zspace_display_activity_file_below_topic_title}}
-  {{#if topic.activity_file}}
-    {{d-button href=topic.activity_file.url icon="download" translatedLabel=topic.activity_file.original_filename}}
+{{#if siteSettings.zspace_display_upload_below_topic_title}}
+  {{#if topic.zspace_upload}}
+    {{d-button href=topic.zspace_upload.url icon="download" translatedLabel=topic.zspace_upload.original_filename}}
   {{/if}}
 {{/if}}
