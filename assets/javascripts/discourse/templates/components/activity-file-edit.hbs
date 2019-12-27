@@ -1,0 +1,15 @@
+{{#if siteSettings.zspace_display_upload_below_topic_title}}
+  {{#if buffered.zspace_upload.url}}
+    {{d-button href=buffered.zspace_upload.url icon="download" translatedLabel=buffered.zspace_upload.original_filename}}
+    <span class='col'>
+      {{d-button action=(action "removeUpload") actionParam=upload class="second btn-default btn-default cancel-edit" icon="times"}}
+    </span>
+  {{/if}}
+    <label class="btn" disabled={{uploading}} title="{{i18n "zspace.upload_a_file"}}">
+      {{d-icon "far-image"}}&nbsp;{{uploadButtonText}}
+      <input class="hidden-upload-field" disabled={{uploading}} type="file" />
+     </label>
+    {{#if uploading}}
+      <span>{{i18n 'upload_selector.uploading'}} {{uploadProgress}}%</span>
+    {{/if}}
+{{/if}}
