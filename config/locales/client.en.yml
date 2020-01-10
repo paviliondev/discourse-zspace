@@ -2,3 +2,6 @@ en:
   js:
     zspace:
       upload: "Upload Activity"
+      delete_upload_confirm: "Please confirm you wish to remove this upload?"
+      upload_a_file: "Upload a file (replaces existing)"
+      upload_successful: "Upload was successful!"
