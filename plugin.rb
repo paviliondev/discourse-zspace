@@ -36,8 +36,8 @@ after_initialize do
       if tc.record_change('zspace_upload', old_zspace_upload, zspace_upload)
         begin
           old_upload_id = JSON.parse(old_zspace_upload)["id"]
-          Upload.find_by(id: old_upload_id).destroy_all
-        rescue => e
+          Upload.where(id: old_upload_id).destroy_all
+        rescue JSON::ParserError => e
           puts e
         end
         unless zspace_upload.blank?  
