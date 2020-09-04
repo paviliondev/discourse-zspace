@@ -5,3 +5,6 @@ plugins:
   zspace_display_upload_below_topic_title:
     client: true
     default: false
+  zspace_community_uploads_category_id:
+    type: category
+    default: -1

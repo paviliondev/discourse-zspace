@@ -2,3 +2,4 @@ en:
   site_settings:
     zspace_upload_wizard_url: "Url of upload wizard"
     zspace_display_upload_below_topic_title: "Display upload link below topic title"
+    zspace_community_uploads_category_id: "Community uploads catetgory"

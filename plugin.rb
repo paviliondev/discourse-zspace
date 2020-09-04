@@ -48,4 +48,22 @@ after_initialize do
         end
       end
   end
+  
+  module CommunityUploadsAllowEdits
+    def can_edit_topic?(topic)
+      if (topic.category_id &&
+        topic.category_id == SiteSetting.zspace_community_uploads_category_id.to_i)
+        
+        return !topic.archived &&
+          is_my_own?(topic) &&
+          !topic.edit_time_limit_expired?(user) &&
+          !Post.where(topic_id: topic.id, post_number: 1).where.not(locked_by_id: nil).exists?
+      end
+      super
+    end
+  end
+  
+  class ::Guardian
+    prepend CommunityUploadsAllowEdits
+  end
 end
